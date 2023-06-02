@@ -1,0 +1,10 @@
+DateTime,TweetId,Text,Username,Language,Hashtags,ReplyCount,RetweetCount,LikeCount,QuoteCount,Sentiment,Value
+2023-04-26 18:15:03+00:00,1651288799064752136,"Our campaign will be powered by folks talking to friends, family, and communities about what is at stake in this election. I need you behind me. 
+
+Get started today: https://t.co/Vl8NP4iZjJ",JoeBiden,en,,2824,1238,5845,156,negative,0.19790153205394745
+2022-12-06 14:30:05+00:00,1600135494070845442,"Georgia, today is Election Day—and the eyes of the nation are on you.
+
+Head to the polls and help send @ReverendWarnock back to the U.S. Senate. https://t.co/1Y1bE3E02P",JoeBiden,en,,1837,1365,6945,96,negative,0.3610517382621765
+2022-12-02 14:57:00+00:00,1598692717118328833,"Today is the last day to vote early ahead of next Tuesday’s Georgia Senate runoff election.
+
+Go vote for @ReverendWarnock who will continue fighting for you.",JoeBiden,en,,2433,2384,11057,136,positive,0.8278471231460571

@@ -1,0 +1,18 @@
+DateTime,TweetId,Text,Username,Language,Hashtags,ReplyCount,RetweetCount,LikeCount,QuoteCount,Sentiment,Value
+2022-12-12 23:21:05+00:00,1602443451823689728,"The Respect for Marriage Act will safeguard the rights and protections to which LGBTQ+ and interracial couples and their children are entitled. 
+
+It will also ensure that LGBTQ+ youth will grow up knowing that they can lead full, happy lives and build families of their own. https://t.co/pa9xQbNMKJ",JoeBiden,en,,4524,3517,26371,403,positive,0.5961987376213074
+2022-06-29 15:56:00+00:00,1542175058927435777,"My message to all LGBTQ+ youth: 
+
+Be you. 
+
+You are loved. 
+You are heard. 
+You are understood. 
+You belong. 
+
+And we have your back.",JoeBiden,en,,14903,14380,130838,4938,negative,0.397304505109787
+2020-04-25 22:17:44+00:00,1254172769882865670,"Older adults are especially vulnerable to COVID-19. Recognizing that, Erica decided to organize youth in her community to buy groceries for seniors — ensuring they receive the food they need while staying safe at home. She's a true hero.",JoeBiden,en,,26,232,1223,2,positive,0.7575382590293884
+2019-10-17 22:55:00+00:00,1184966065220128768,"Every young person deserves to be affirmed and accepted exactly as they are — regardless of sexual orientation or gender identity. Today on #SpiritDay and every day, we must ensure LGBTQ youth hear that message loud and clear.",JoeBiden,en,['SpiritDay'],162,516,3525,24,negative,0.1919150948524475
+2019-02-05 19:45:42+00:00,1092871910067707906,"Today far too many transgender youth continue to face rejection at home and discrimination in their communities. Check out the work @bidenfoundation is doing with @lgbtmap and @genderspectrum to support these young people: https://t.co/TxMLXge8vh 
+#AdvancingAcceptance",JoeBiden,en,['AdvancingAcceptance'],165,752,4786,90,negative,0.2929222881793976

@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "0M30v9PXyhu1VWXJ7nBTfo1QLJItHqIWkrJZhi5AQwR1YyHYNo5lG8YGU2VG5MGH7fxQx+ez/g5yKTwCOQ8F3g==",
+  "dgSpecHash": "5dZb0Ds1ainZcm8/L93XfmXP7mkccwoOYtd7JfwNQQwHEEklU6h6/NZSpjyLhmw9Q6OdAS4u7I7EeNLTYgI2ag==",
   "success": true,
   "projectFilePath": "D:\\UPB\\Licenta\\LicentaBun\\LicentaBun\\LicentaBun.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\Admin\\.nuget\\packages\\csvhelper\\30.0.1\\csvhelper.30.0.1.nupkg.sha512",
     "C:\\Users\\Admin\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\Admin\\.nuget\\packages\\microsoft.aspnetcore.authentication.jwtbearer\\6.0.15\\microsoft.aspnetcore.authentication.jwtbearer.6.0.15.nupkg.sha512",
     "C:\\Users\\Admin\\.nuget\\packages\\microsoft.csharp\\4.5.0\\microsoft.csharp.4.5.0.nupkg.sha512",

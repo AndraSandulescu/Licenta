@@ -67,3 +67,4 @@ D:\UPB\Licenta\LicentaBun\LicentaBun\obj\Debug\net6.0\LicentaBun.pdb
 D:\UPB\Licenta\LicentaBun\LicentaBun\obj\Debug\net6.0\LicentaBun.genruntimeconfig.cache
 D:\UPB\Licenta\LicentaBun\LicentaBun\obj\Debug\net6.0\ref\LicentaBun.dll
 D:\UPB\Licenta\LicentaBun\LicentaBun\bin\Debug\net6.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+D:\UPB\Licenta\LicentaBun\LicentaBun\bin\Debug\net6.0\CsvHelper.dll

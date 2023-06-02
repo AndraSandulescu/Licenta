@@ -4,10 +4,12 @@ import snscrape.modules.twitter as sntwitter
 import pandas as pd
 import json
 
+path = "D:\\UPB\\Licenta\\LicentaBun\\LicentaBun\\Csv\\"
 
 def search(text, username, until, since, retweet, replies):
     global filename
-    q = text
+    
+    q = text #query ul de search
     if username != '':
         q += f" from:{username}"
     if until == '':
@@ -17,10 +19,11 @@ def search(text, username, until, since, retweet, replies):
         since = datetime.datetime.strftime(datetime.datetime.strptime(until, '%Y-%m-%d') - datetime.timedelta(days=7),
                                            '%Y-%m-%d')
         q += f" since:{since}"
-    if retweet == 'y':
+    if retweet == 'n':
         q += f" exclude:retweets"
-    if replies == 'y':
+    if replies == 'n':
         q += f" exclude:replies"
+
 
     if username != '' and text != '':
         filename = f"{since}_{until}_{username}_{text}.csv"
@@ -28,7 +31,10 @@ def search(text, username, until, since, retweet, replies):
         filename = f"{since}_{until}_{username}.csv"
     else:
         filename = f"{since}_{until}_{text}.csv"
-    print(filename)
+    #print(filename)
+
+
+
     return q
 
 
@@ -63,17 +69,17 @@ def scrape_tweets(text, username, since, until, retweet, replies, count):
     tweets_df.sort_values(by='DateTime', ascending=False, inplace=True)
 
     # Generate a unique filename based on the query parameters
-    filename = f"{since}_{until}_{username}_{text}.csv" if username != '' and text != '' else f"{since}_{until}_{username}.csv" if username != "" else f"{since}_{until}_{text}.csv"
+    #filename = f"{since}_{until}_{username}_{text}.csv" if username != '' and text != '' else f"{since}_{until}_{username}.csv" if username != "" else f"{since}_{until}_{text}.csv"
 
     # Save the DataFrame to CSV file
-    tweets_df.to_csv(filename, index=False)
+    #print(path+filename)
+    tweets_df.to_csv(path+filename, index=False)
 
     # Return the filename and its path as a JSON string
-    response = {
-        "filename": filename,
-        "filepath": "D:/UPB/Licenta/LicentaBun/LicentaBun/" + filename
-    }
-    return json.dumps(response)
+    #response = {
+    #    "filename": path+filename,
+    #}
+    #return json.dumps(response)
 
 
 if __name__ == "__main__":
@@ -89,5 +95,6 @@ if __name__ == "__main__":
     replies = sys.argv[6]
     count = int(sys.argv[7])
 
-    result = scrape_tweets(text, username, since, until, retweet, replies, count)
-    print(result)
+    #result = scrape_tweets(text, username, since, until, retweet, replies, count)
+    scrape_tweets(text, username, since, until, retweet, replies, count)
+    print(filename)
