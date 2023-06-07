@@ -1,0 +1,6 @@
+DateTime,TweetId,Text,Username,Language,Hashtags,ReplyCount,RetweetCount,LikeCount,QuoteCount,Sentiment,Value
+2023-06-04 21:53:00+00:00,1665476773889421313,"No one earning less than $400,000 a year will pay a penny more in federal taxes.",JoeBiden,en,,20419,3934,33187,1359,positive,0.5833333333333334
+2023-06-04 14:37:23+00:00,1665367148770783233,"Yesterday, I signed our bipartisan budget agreement into law:
+—Preventing a default that could have caused an economic crisis and cost millions of jobs
+—Protecting Social Security, Medicare &amp; Medicaid, veterans’ benefits and historic investments in infrastructure and clean energy https://t.co/mHpTn6wzug",JoeBiden,en,,1760,1401,9033,134,positive,0.575
+2023-06-03 21:10:01+00:00,1665103569786109952,"The annual inflation rate has fallen for 10 months in a row, and it’s down more than 40% since last summer.",JoeBiden,en,,12610,2306,13199,718,positive,0.5574074074074074

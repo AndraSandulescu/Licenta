@@ -1,0 +1,11 @@
+DateTime,TweetId,Text,Username,Language,Hashtags,ReplyCount,RetweetCount,LikeCount,QuoteCount,Sentiment,Value
+2023-01-06 00:09:00+00:00,1611152819419058178,"Folks, get your updated COVID vaccine.
+
+https://t.co/l9SnrQeUu1.",JoeBiden,en,,5617,1222,8839,334,uncertain,0.0
+2022-10-26 22:59:00+00:00,1585405666038005762,"We've made updated COVID-19 vaccines easy to get and available for free at tens of thousands of convenient locations. These include local pharmacies, doctor's offices, community health centers, and rural health clinics.
+
+Find an appointment at https://t.co/EwdQ2dFHwG today.",JoeBiden,en,,877,504,2333,66,positive,0.24666666666666667
+2022-08-31 16:02:01+00:00,1565007006443995138,"We’ve come a long way. COVID no longer controls our lives, there are a record number of Americans working, businesses are growing, and our schools are open. 
+
+Even in the face of unrelenting attacks from the most powerful special interests in the country, we got it done.",JoeBiden,en,,5143,2521,16632,1749,positive,0.22142857142857145
+2022-07-30 17:04:00+00:00,1553426194326077440,"While COVID is still with us, our fight against this virus is making a difference. We can now protect ourselves from serious illness due to COVID, and COVID deaths are down nearly 90%.",JoeBiden,en,,2259,1877,14577,240,negative,-0.12847222222222224

@@ -1,0 +1,21 @@
+DateTime,TweetId,Text,Username,Language,Hashtags,ReplyCount,RetweetCount,LikeCount,QuoteCount,Sentiment,Value
+2021-05-21 16:02:53+00:00,1395772093422317579,"Folks, let’s beat this virus once and for all. 
+🔍 Visit https://t.co/EwdQ2dFHwG
+💬 Text your ZIP code to 438829
+📞 Call 1 (800) 232-0233
+
+Together, #WeCanDoThis.",JoeBiden,en,['WeCanDoThis'],1871,2322,13713,190,uncertain,0.40004676580429077
+2021-05-18 23:10:29+00:00,1394792535923507200,Text your ZIP code to 438829 to find COVID-19 vaccination locations near you.,JoeBiden,en,,3603,6192,34014,601,negative,0.39658263325691223
+2020-11-01 16:25:00+00:00,1322937695606362118,"Folks, there are just three days left to vote in this election, and we need your help to get people to the polls. Text three friends or family members and make sure they have a plan to vote. https://t.co/xu4mk3W5x2",JoeBiden,en,,2231,3885,27725,429,negative,0.39599865674972534
+2020-08-08 22:30:00+00:00,1292226583101497344,"It’s an important choice, and I want you to be one of the first to know who I’ve picked as my running mate – text FIRST to 30330 to get notified when I’ve made my decision.",JoeBiden,en,,6803,5550,39590,1193,negative,0.3963615894317627
+2020-08-05 23:00:00+00:00,1291146968136323073,"Folks, a lot of you have been asking when I’m announcing my running mate, and I promise I’ll let you know soon. But here’s what I can tell you right now: I’m going to tell my supporters first — so text FIRST to 30330 to be the first to know.",JoeBiden,en,,9816,8433,59609,1851,negative,0.26470085978507996
+2020-05-11 18:45:00+00:00,1259917439132819456,"With folks staying at home during this time of social distancing, we put together some fun activities to keep everyone entertained. Text FREE to 30330 to be the first to get a look at what we’ve been working on. https://t.co/7dDXj3dPCm",JoeBiden,en,,577,850,2951,75,uncertain,0.4142233729362488
+2020-02-13 00:01:00+00:00,1227744443022770177,"Iowa and New Hampshire were just the beginning—we're taking this campaign to the rest of the country, and we need your help to talk with voters. Every conversation makes a big difference, and it's as easy as sending a text. Sign up to help today: https://t.co/15wwDCwJIZ https://t.co/JpiKikRrt3",JoeBiden,en,,175,213,659,27,positive,0.5637123584747314
+2019-08-16 16:39:00+00:00,1162403394272673794,"We are in a battle for the soul of this nation. If we want to win, it’s going to take everyone stepping up, speaking out, and taking action.
+
+Text JOIN to 30330 and let’s get to work. https://t.co/zMdN7OeK0h",JoeBiden,en,,212,289,1663,22,negative,0.38257095217704773
+2019-08-01 02:53:21+00:00,1156759796382601219,"I just got off the stage where I shared my bold vision for our future built on uniting our country. Because I know if we work together, there’s nothing we can’t do.
+
+Let's keep our momentum going. If you liked what you heard tonight, text JOE to 30330 and let's get to work. https://t.co/EDIKTYiJB1",JoeBiden,en,,724,587,2469,238,positive,0.5450149774551392
+2019-05-25 17:50:00+00:00,1132343069355991040,"With so much happening on the campaign, we want to make sure you’re up-to-date on the latest news. Text JOIN right now to 30330 to make sure you don’t miss a thing!",JoeBiden,en,,224,225,1234,59,negative,0.3610211908817291
+2017-11-01 12:53:01+00:00,925707249573605377,Don’t let politics &amp; misinformation keep your loved ones from getting health insurance. Call/text them today to make sure they sign up!,JoeBiden,en,,107,2303,7554,31,negative,0.3986406624317169

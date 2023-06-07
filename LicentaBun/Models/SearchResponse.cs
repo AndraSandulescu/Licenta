@@ -1,4 +1,6 @@
-﻿namespace LicentaBun.Models
+﻿using System.Reflection;
+
+namespace LicentaBun.Models
 {
     public class SearchResponse
     {

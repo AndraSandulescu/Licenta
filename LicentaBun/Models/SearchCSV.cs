@@ -4,7 +4,6 @@ namespace LicentaBun.Models
 {
     public class SearchCSV
     {
-
         public string DateTime { get; set; }
         public string TweetId { get; set; }
         public string Text { get; set; }

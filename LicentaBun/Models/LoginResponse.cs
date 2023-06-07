@@ -7,7 +7,8 @@
         public int UniqueID { get; set; }
         public string Token { get; set; }
 
-        public LoginResponse() {; }
+        public LoginResponse() { ; }
+
         public LoginResponse(string nickname, int uniqueID, string token)
         {
             Nickname = nickname;

@@ -1,0 +1,14 @@
+DateTime,TweetId,Text,Username,Language,Hashtags,ReplyCount,RetweetCount,LikeCount,QuoteCount,Sentiment,Value
+2023-03-24 17:37:01+00:00,1639320426072649728,"I signed the largest investment in climate, environmental justice, and conservation ever. 
+
+These investments have helped protect our iconic outdoor spaces, preserve our historic sites, and make our nation more resilient to the impacts of climate change.",JoeBiden,en,,1876,1098,6297,123,positive,0.3333333333333333
+2022-08-08 22:43:00+00:00,1556772997804982272,"The Inflation Reduction Act makes the largest investment ever in combating climate change.
+
+It addresses the climate crisis and strengthens our energy security, creating jobs manufacturing solar panels, wind turbines, and electric vehicles in America with American workers.",JoeBiden,en,,2323,1141,7324,140,uncertain,0.0
+2022-06-30 23:12:01+00:00,1542647170192625664,"The Supreme Court’s ruling in West Virginia vs. EPA risks damaging our nation’s ability to keep our air clean and combat climate change.
+
+We cannot ignore the existential threat the climate crisis poses. Our fight against climate change must carry forward, and it will.",JoeBiden,en,,4298,3619,21778,492,positive,0.3666666666666667
+2021-12-08 17:06:03+00:00,1468627948425166853,"The Bipartisan Infrastructure Law builds back our bridges, water systems, power lines, electric grid better and stronger, making them more resilient to the effects of climate change. No American should have to deal with flooding or losing power for days and weeks after a storm.",JoeBiden,en,,1149,1666,10034,118,positive,0.25
+2021-11-18 00:29:01+00:00,1461129281350864899,"Together, the Bipartisan Infrastructure Law and Build Back Better Act will create millions of jobs, lower costs for working families, and meet the moment on climate change. 
+
+These are transformative investments in the American people and our future.",JoeBiden,en,,1117,1419,8727,99,positive,0.125
