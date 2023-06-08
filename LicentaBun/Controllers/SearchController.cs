@@ -20,32 +20,12 @@ namespace LicentaBun.Controllers
     {
         private string model = "ModelTextblob";
         //private static string searchedFileCsv = "";
-        
+
         //dictionar id-fisier
         private static Dictionary<int, SearchFile> searchFileDictionary = new Dictionary<int, SearchFile>();
         private static int searchFileIndex = 0;
 
-        //dictionar id-comparePoliticiansCsv
-        public static Dictionary<int, string> CsvFiles = new Dictionary<int, string>
-        {
-            {0, "D:\\UPB\\Licenta\\LicentaBun\\LicentaBun\\ComparePoliticiansCsv\\AlexandriaOcasioCortez_output.csv"},
-            {1, "D:\\UPB\\Licenta\\LicentaBun\\LicentaBun\\ComparePoliticiansCsv\\BarackObama_output.csv"},
-            {2, "D:\\UPB\\Licenta\\LicentaBun\\LicentaBun\\ComparePoliticiansCsv\\BillClinton_output.csv"},
-            {3, "D:\\UPB\\Licenta\\LicentaBun\\LicentaBun\\ComparePoliticiansCsv\\ChuckSchumer_output.csv"},
-            {4, "D:\\UPB\\Licenta\\LicentaBun\\LicentaBun\\ComparePoliticiansCsv\\CoryBooker_output.csv"},
-            {5, "D:\\UPB\\Licenta\\LicentaBun\\LicentaBun\\ComparePoliticiansCsv\\ElizabethWarren_output.csv"},
-            {6, "D:\\UPB\\Licenta\\LicentaBun\\LicentaBun\\ComparePoliticiansCsv\\HillaryClinton_output.csv"},
-            {7, "D:\\UPB\\Licenta\\LicentaBun\\LicentaBun\\ComparePoliticiansCsv\\IlhanOmar_output.csv"},
-            {8, "D:\\UPB\\Licenta\\LicentaBun\\LicentaBun\\ComparePoliticiansCsv\\JoeBiden_output.csv"},
-            {9, "D:\\UPB\\Licenta\\LicentaBun\\LicentaBun\\ComparePoliticiansCsv\\KamalaHarris_output.csv"},
-            {10, "D:\\UPB\\Licenta\\LicentaBun\\LicentaBun\\ComparePoliticiansCsv\\LindseyGraham_output.csv"},
-            {11, "D:\\UPB\\Licenta\\LicentaBun\\LicentaBun\\ComparePoliticiansCsv\\MarcoRubio_output.csv"},
-            {12, "D:\\UPB\\Licenta\\LicentaBun\\LicentaBun\\ComparePoliticiansCsv\\MichelleObama_output.csv"},
-            {13, "D:\\UPB\\Licenta\\LicentaBun\\LicentaBun\\ComparePoliticiansCsv\\MitchMcConnell_output.csv"},
-            {14, "D:\\UPB\\Licenta\\LicentaBun\\LicentaBun\\ComparePoliticiansCsv\\NancyPelosi_output.csv"},
-            {15, "D:\\UPB\\Licenta\\LicentaBun\\LicentaBun\\ComparePoliticiansCsv\\RandPaul_output.csv"},
-            {16, "D:\\UPB\\Licenta\\LicentaBun\\LicentaBun\\ComparePoliticiansCsv\\TedCruz_output.csv"},
-        };
+
 
         [AllowAnonymous]
         [HttpGet]
@@ -62,7 +42,7 @@ namespace LicentaBun.Controllers
 
             string pythonPath = "C:\\Users\\Admin\\AppData\\Local\\Programs\\Python\\Python311\\python.exe"; // Specifică calea către interpretorul Python instalat pe serverul tău 
             string scriptPath = "D:\\UPB\\Licenta\\LicentaBun\\LicentaBun\\PythonScripts\\SearchScript.py"; // Specifică calea către scriptul SearchScript.py
-           
+
 
 
             // Inițializează un proces pentru a rula scriptul Python
@@ -81,14 +61,14 @@ namespace LicentaBun.Controllers
 
             string outputFile = pythonProcess.StandardOutput.ReadToEnd();
 
-            
-            if(string.IsNullOrEmpty(outputFile))
+
+            if (string.IsNullOrEmpty(outputFile))
             {
                 return Ok("Nu s-au găsit Tweet-uri pentru parametrii introduși");
             }
 
-            string output = path+ outputFile;
-            output=output.Substring(0, output.Length - 2);
+            string output = path + outputFile;
+            output = output.Substring(0, output.Length - 2);
 
             pythonProcess.WaitForExit();
 
@@ -103,7 +83,7 @@ namespace LicentaBun.Controllers
             searchFileDictionary.Add(searchFileIndex, searchFile);
 
 
-            
+
 
             searchFileIndex++;
 
@@ -139,15 +119,12 @@ namespace LicentaBun.Controllers
         [AllowAnonymous]
         [HttpGet]
         [Route("ModelScript")]
-        public IActionResult ModelScript(int index, bool fromComparePoliticians)
+        public IActionResult ModelScript(int index)
         {
-            SearchFile searchFile = new SearchFile();
+
+            SearchFile searchFile = new SearchFile(); //-> filename, userId, searchRequest-> text username until since retweet replies count
             string inputFilename = "";
-
-
-
-
-
+            string output = "";
 
             if (searchFileDictionary.TryGetValue(index, out searchFile))
             {
@@ -183,7 +160,7 @@ namespace LicentaBun.Controllers
                 pythonProcess.Start();
 
                 // Citește și afișează rezultatul scriptului Python
-                string output = pythonProcess.StandardOutput.ReadToEnd(); //deja are path ul complet
+                output = pythonProcess.StandardOutput.ReadToEnd(); //deja are path ul complet
                 pythonProcess.WaitForExit();
 
                 if (string.IsNullOrEmpty(output))
@@ -194,10 +171,8 @@ namespace LicentaBun.Controllers
 
                 output = output.Substring(0, output.Length - 2);
                 //return Ok(output);
-
                 //ia din csv si pune in clasa -> json; lista de linii de csv
                 List<SentimentCSV> results = new List<SentimentCSV>();
-
                 StreamReader reader = null;
 
                 try

@@ -2,6 +2,11 @@ using LicentaBun.Repository;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.IdentityModel.Tokens;
 using System.Text;
+using Quartz;
+using Quartz.Impl;
+using System;
+using System.Threading.Tasks;
+using LicentaBun.Models;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -63,5 +68,7 @@ app.UseEndpoints(endpoints =>
     endpoints.MapControllers();
 });
 
+
+await Scheduler.Start();
 
 app.Run();
