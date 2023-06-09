@@ -48,12 +48,7 @@ D:\UPB\Licenta\LicentaBun\LicentaBun\bin\Debug\net6.0\runtimes\win-arm\native\Mi
 D:\UPB\Licenta\LicentaBun\LicentaBun\bin\Debug\net6.0\runtimes\win-arm64\native\Microsoft.Data.SqlClient.SNI.dll
 D:\UPB\Licenta\LicentaBun\LicentaBun\bin\Debug\net6.0\runtimes\win-x64\native\Microsoft.Data.SqlClient.SNI.dll
 D:\UPB\Licenta\LicentaBun\LicentaBun\bin\Debug\net6.0\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.dll
-D:\UPB\Licenta\LicentaBun\LicentaBun\bin\Debug\net6.0\runtimes\win\lib\netcoreapp3.0\Microsoft.Win32.SystemEvents.dll
-D:\UPB\Licenta\LicentaBun\LicentaBun\bin\Debug\net6.0\runtimes\unix\lib\netcoreapp3.0\System.Drawing.Common.dll
-D:\UPB\Licenta\LicentaBun\LicentaBun\bin\Debug\net6.0\runtimes\win\lib\netcoreapp3.0\System.Drawing.Common.dll
 D:\UPB\Licenta\LicentaBun\LicentaBun\bin\Debug\net6.0\runtimes\win\lib\netstandard2.0\System.Runtime.Caching.dll
-D:\UPB\Licenta\LicentaBun\LicentaBun\bin\Debug\net6.0\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
-D:\UPB\Licenta\LicentaBun\LicentaBun\bin\Debug\net6.0\runtimes\win\lib\netcoreapp3.0\System.Windows.Extensions.dll
 D:\UPB\Licenta\LicentaBun\LicentaBun\obj\Debug\net6.0\staticwebassets\msbuild.LicentaBun.Microsoft.AspNetCore.StaticWebAssets.props
 D:\UPB\Licenta\LicentaBun\LicentaBun\obj\Debug\net6.0\staticwebassets\msbuild.build.LicentaBun.props
 D:\UPB\Licenta\LicentaBun\LicentaBun\obj\Debug\net6.0\staticwebassets\msbuild.buildMultiTargeting.LicentaBun.props
@@ -68,3 +63,11 @@ D:\UPB\Licenta\LicentaBun\LicentaBun\obj\Debug\net6.0\refint\LicentaBun.dll
 D:\UPB\Licenta\LicentaBun\LicentaBun\obj\Debug\net6.0\LicentaBun.pdb
 D:\UPB\Licenta\LicentaBun\LicentaBun\obj\Debug\net6.0\LicentaBun.genruntimeconfig.cache
 D:\UPB\Licenta\LicentaBun\LicentaBun\obj\Debug\net6.0\ref\LicentaBun.dll
+D:\UPB\Licenta\LicentaBun\LicentaBun\bin\Debug\net6.0\Quartz.dll
+D:\UPB\Licenta\LicentaBun\LicentaBun\bin\Debug\net6.0\Quartz.Extensions.DependencyInjection.dll
+D:\UPB\Licenta\LicentaBun\LicentaBun\bin\Debug\net6.0\Quartz.Extensions.Hosting.dll
+D:\UPB\Licenta\LicentaBun\LicentaBun\bin\Debug\net6.0\runtimes\win\lib\net6.0\Microsoft.Win32.SystemEvents.dll
+D:\UPB\Licenta\LicentaBun\LicentaBun\bin\Debug\net6.0\runtimes\unix\lib\net6.0\System.Drawing.Common.dll
+D:\UPB\Licenta\LicentaBun\LicentaBun\bin\Debug\net6.0\runtimes\win\lib\net6.0\System.Drawing.Common.dll
+D:\UPB\Licenta\LicentaBun\LicentaBun\bin\Debug\net6.0\runtimes\win\lib\net6.0\System.Security.Cryptography.ProtectedData.dll
+D:\UPB\Licenta\LicentaBun\LicentaBun\bin\Debug\net6.0\runtimes\win\lib\net6.0\System.Windows.Extensions.dll

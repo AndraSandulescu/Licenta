@@ -41,6 +41,28 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
+
+
+//cron job
+builder.Services.AddQuartz(q =>
+{
+    q.UseMicrosoftDependencyInjectionScopedJobFactory();
+    // Just use the name of your job that you created in the Jobs folder.
+    var jobKey = new JobKey("LatestNews");
+    q.AddJob<NewsJob>(opts => opts.WithIdentity(jobKey));
+
+    q.AddTrigger(opts => opts
+        .ForJob(jobKey)
+        .WithIdentity("LatestNewsJob-trigger")
+        //This Cron interval can be described as "run every 2 minutes"
+        .WithCronSchedule("0 */10 * ? * *")
+    );
+});
+builder.Services.AddQuartzHostedService(q => q.WaitForJobsToComplete = true);
+
+
+
+
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
@@ -67,8 +89,5 @@ app.UseEndpoints(endpoints =>
 {
     endpoints.MapControllers();
 });
-
-
-await Scheduler.Start();
 
 app.Run();
