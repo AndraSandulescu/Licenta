@@ -43,11 +43,21 @@ namespace LicentaBun.Controllers
         [AllowAnonymous]
         [HttpGet]
         [Route("Compare")]
-        public IActionResult Compare(string text, string formattedSince, string formattedUntil, int politician1, int politician2)
+        public IActionResult Compare([FromQuery] CompareRequest compare)
         {
+
+            string text = compare.text;
+
+            string since = compare.since;
+            string until = compare.until;
+
+            int politician1 = compare.politician1 ?? -1;
+            int politician2 = compare.politician2 ?? -1;
+
+
             if (!ComparePoliticiansCsv.ContainsKey(politician1) && !ComparePoliticiansCsv.ContainsKey(politician2))
             {
-                return NotFound("Nu ați selectat niciun politician pentru a realiza comparația");
+                return Ok("Nu ați selectat niciun politician pentru a realiza comparația");
             }
             List<SentimentCSV> results = new List<SentimentCSV>();
             ModelResponse response1 = new ModelResponse();
@@ -55,15 +65,15 @@ namespace LicentaBun.Controllers
 
             string filePolitician1 = "";
             string filePolitician2 = "";
-            if (ComparePoliticiansCsv.TryGetValue(politician1, out filePolitician1))
+            if (politician1!=-1 && ComparePoliticiansCsv.TryGetValue(politician1, out filePolitician1))
             {
-                results = SearchEntriesInCsv(filePolitician1, formattedSince, formattedUntil, text);
+                results = SearchEntriesInCsv(filePolitician1, since, until, text);
                 response1 = CreateModelResponse(results, politician1);
             }
 
-            if (ComparePoliticiansCsv.TryGetValue(politician2, out filePolitician2))
+            if (politician2 != -1 && ComparePoliticiansCsv.TryGetValue(politician2, out filePolitician2))
             {
-                results = SearchEntriesInCsv(filePolitician2, formattedSince, formattedUntil, text);
+                results = SearchEntriesInCsv(filePolitician2, since, until, text);
                 response2 = CreateModelResponse(results, politician2);
             }
             CompareResponse compareResponse = new CompareResponse();
@@ -80,7 +90,7 @@ namespace LicentaBun.Controllers
             // Returnați ce este necesar în cazul în care nu se găsește niciun fișier
         }
 
-        private List<SentimentCSV> SearchEntriesInCsv(string csvFilePath, string formattedSince, string formattedUntil, string text)
+        private List<SentimentCSV> SearchEntriesInCsv(string csvFilePath, string since, string until, string text)
         {
             List<SentimentCSV> matchingEntries = new List<SentimentCSV>();
 
@@ -91,8 +101,8 @@ namespace LicentaBun.Controllers
                     .Where(entry =>
                     {
                         DateTime entryDate = DateTime.Parse(entry.searchCsv.DateTime);
-                        DateTime sinceDate = DateTime.Parse(formattedSince);
-                        DateTime untilDate = DateTime.Parse(formattedUntil);
+                        DateTime sinceDate = DateTime.Parse(since);
+                        DateTime untilDate = DateTime.Parse(until);
                         return entryDate >= sinceDate && entryDate <= untilDate && entry.searchCsv.Text.Contains(text);
                     })
                     .ToList();

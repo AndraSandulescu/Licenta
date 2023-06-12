@@ -64,6 +64,10 @@ namespace LicentaBun.Controllers
 
             if (string.IsNullOrEmpty(outputFile))
             {
+                // Set multiple CORS headers
+                Response.Headers.Add("Access-Control-Allow-Origin", "http://localhost:3000");
+                Response.Headers.Add("Access-Control-Allow-Methods", "GET, POST, PUT, DELETE");
+                Response.Headers.Add("Access-Control-Allow-Headers", "Content-Type, Authorization");
                 return Ok("Nu s-au găsit Tweet-uri pentru parametrii introduși");
             }
 

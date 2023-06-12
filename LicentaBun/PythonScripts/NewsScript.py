@@ -29,8 +29,8 @@ def search(text, username, since, until, retweet, replies):
     if replies == 'n':
         q += f" exclude:replies"
 
-    filename = f"{username}_{since}_{until}.csv"
-    print(filename)
+    filename = f"working.csv"
+    #print(filename)
     print("query:")
     print(q)
     return q
@@ -49,7 +49,7 @@ def scrape_tweets(text, username, since, until, retweet, replies):
 
     tweets_df = pd.DataFrame(
         tweets_list,
-        columns=['DateTime', 'TweetId', 'Text', 'Username', 'displayname', 'Language', 'Hashtags', 'ReplyCount',
+        columns=['DateTime', 'TweetId', 'Text', 'Username', 'Displayname', 'Language', 'Hashtags', 'ReplyCount',
                  'RetweetCount',
                  'LikeCount', 'QuoteCount']
     )
@@ -62,7 +62,7 @@ def scrape_tweets(text, username, since, until, retweet, replies):
 
     # Salvare DataFrame în CSV
     tweets_df.to_csv(output_file, index=False)
-    print("\ngata 1 sortat\n")
+    #print("\ngata 1 sortat\n")
     tweets_df.drop_duplicates(subset=['Text'], inplace=True)
 
     # Concatenare fișier generat acum cu fișierul existent, eliminând duplicatelor
@@ -96,7 +96,7 @@ if __name__ == "__main__":
     usernames = ["AOC","BillClinton","BarackObama","SenSchumer", "CoryBooker", "ewarren", "HillaryClinton",  "IlhanMN", "JoeBiden", "KamalaHarris", 
                  "LindseyGrahamSC", "marcorubio",  "MichelleObama", "LeaderMcConnell", "SpeakerPelosi", "RandPaul", "tedcruz"]  # Lista statică de utilizatori
     until = datetime.datetime.now().strftime('%Y-%m-%d')  # Data până la care să se facă căutarea (astăzi)
-    since = (datetime.datetime.now() - datetime.timedelta(hours=720)).strftime(
+    since = (datetime.datetime.now() - datetime.timedelta(hours=24)).strftime(
         '%Y-%m-%d')  # Data de la care să se facă căutarea (ultimele 24 de ore)
     retweet = "y"  # Include retweet-uri (da)
     replies = "y"  # Include răspunsuri (da)

@@ -52,7 +52,7 @@ namespace LicentaBun.Controllers
 
         [AllowAnonymous]
         [HttpPost]
-        [Route("register")]
+        [Route("Register")]
         public IActionResult Register(RegisterRequest registerData)
         {
 

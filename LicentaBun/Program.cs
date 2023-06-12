@@ -14,7 +14,7 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddAuthentication(x =>
 {
     x.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
-    x.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
+    //x.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
 }).AddJwtBearer(o =>
 {
                                     //appsettings.json
@@ -54,8 +54,7 @@ builder.Services.AddQuartz(q =>
     q.AddTrigger(opts => opts
         .ForJob(jobKey)
         .WithIdentity("LatestNewsJob-trigger")
-        //This Cron interval can be described as "run every 2 minutes"
-        .WithCronSchedule("0 */10 * ? * *")
+        .WithCronSchedule("0 0 11 * * ?") //la ora 11 zilnic
     );
 });
 builder.Services.AddQuartzHostedService(q => q.WaitForJobsToComplete = true);
