@@ -40,7 +40,7 @@ namespace LicentaBun.Controllers
             {16, "D:\\UPB\\Licenta\\LicentaBun\\LicentaBun\\ComparePoliticiansCsv\\TedCruz_output.csv"},
         };
 
-        [AllowAnonymous]
+       
         [HttpGet]
         [Route("Compare")]
         public IActionResult Compare([FromQuery] CompareRequest compare)
@@ -48,8 +48,8 @@ namespace LicentaBun.Controllers
 
             string text = compare.text;
 
-            string since = compare.since;
-            string until = compare.until;
+            string since = compare.formattedSince;
+            string until = compare.formattedUntil;
 
             int politician1 = compare.politician1 ?? -1;
             int politician2 = compare.politician2 ?? -1;
@@ -92,6 +92,11 @@ namespace LicentaBun.Controllers
 
         private List<SentimentCSV> SearchEntriesInCsv(string csvFilePath, string since, string until, string text)
         {
+
+            //trateaza momentele cand since si until sunt egale cu null
+
+            //trateaza moemnt cand text e null
+
             List<SentimentCSV> matchingEntries = new List<SentimentCSV>();
 
             using (var reader = new StreamReader(csvFilePath))

@@ -27,7 +27,7 @@ namespace LicentaBun.Controllers
 
 
 
-        [AllowAnonymous]
+       
         [HttpGet]
         [Route("SearchScript")]
         public IActionResult SearchScript([FromQuery] SearchRequest search, int userID)
@@ -120,7 +120,6 @@ namespace LicentaBun.Controllers
 
 
         //script model
-        [AllowAnonymous]
         [HttpGet]
         [Route("ModelScript")]
         public IActionResult ModelScript(int index)

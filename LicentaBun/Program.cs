@@ -43,6 +43,8 @@ builder.Services.AddSwaggerGen();
 
 
 
+
+
 //cron job
 builder.Services.AddQuartz(q =>
 {
@@ -58,6 +60,7 @@ builder.Services.AddQuartz(q =>
     );
 });
 builder.Services.AddQuartzHostedService(q => q.WaitForJobsToComplete = true);
+
 
 
 

@@ -24,16 +24,6 @@ namespace LicentaBun.Models
             pythonProcess.Start();
             pythonProcess.WaitForExit();
 
-
-            //var currentTime = DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss");
-            ////var filePath = "D:\\UPB\\Licenta\\CronJob1\\CronJob1\\Models\\cron[{currentTime:HHmmss}].txt";
-            //string fileName = Path.Combine(@"D:\UPB\Licenta\CronJob1\CronJob1\Models\", DateTime.Now.ToString("yyyy-MM-dd HH-mm-ss") + ".txt");
-            //using (StreamWriter writer = new StreamWriter(fileName))
-            //{
-            //    writer.WriteLine($"Ora exactă a creării: {currentTime}");
-            //}
-
-
             return Task.FromResult(true);
         }
     }

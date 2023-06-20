@@ -35,7 +35,7 @@ namespace LicentaBun.Repository
                   {
                     new Claim(ClaimTypes.Name, users.Nickname)
                   }),
-                Expires = DateTime.UtcNow.AddMinutes(10),
+                Expires = DateTime.UtcNow.AddMinutes(120),
                 SigningCredentials = new SigningCredentials(new SymmetricSecurityKey(tokenKey), SecurityAlgorithms.HmacSha256Signature)
             };
             var token = tokenHandler.CreateToken(tokenDescriptor);

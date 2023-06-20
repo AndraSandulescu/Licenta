@@ -22,7 +22,7 @@ namespace LicentaBun.Controllers
 
     public class NewsController : Controller
     {
-        [AllowAnonymous]
+       
         [HttpGet]
         [Route("NewsFeed")]
         public IActionResult LoadNews()
