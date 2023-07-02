@@ -1,0 +1,27 @@
+DateTime,TweetId,Text,Username,Language,Hashtags,ReplyCount,RetweetCount,LikeCount,QuoteCount,Sentiment,Value
+2023-01-06 00:09:00+00:00,1611152819419058178,"Folks, get your updated COVID vaccine.
+
+https://t.co/l9SnrQeUu1.",JoeBiden,en,,5595,1212,8811,334,uncertain,0.5
+2022-10-26 22:59:00+00:00,1585405666038005762,"We've made updated COVID-19 vaccines easy to get and available for free at tens of thousands of convenient locations. These include local pharmacies, doctor's offices, community health centers, and rural health clinics.
+
+Find an appointment at https://t.co/EwdQ2dFHwG today.",JoeBiden,en,,874,502,2328,66,positive,0.6233333333333333
+2022-08-31 16:02:01+00:00,1565007006443995138,"We’ve come a long way. COVID no longer controls our lives, there are a record number of Americans working, businesses are growing, and our schools are open. 
+
+Even in the face of unrelenting attacks from the most powerful special interests in the country, we got it done.",JoeBiden,en,,5119,2519,16593,1749,positive,0.6107142857142858
+2022-07-30 17:04:00+00:00,1553426194326077440,"While COVID is still with us, our fight against this virus is making a difference. We can now protect ourselves from serious illness due to COVID, and COVID deaths are down nearly 90%.",JoeBiden,en,,2255,1874,14544,240,negative,0.4357638888888889
+2022-07-29 20:50:13+00:00,1553120735018745857,"These COVID tools are free, convenient, safe, and they work. https://t.co/Y63EqER9b5",JoeBiden,en,,1556,1012,6220,141,positive,0.725
+2022-07-08 19:04:00+00:00,1545483861173215232,"Today we learned that our private sector has recovered all of the jobs lost during the pandemic, and added more.
+
+There’s more work to do, but this recovery would not have been possible without the actions we took to fix a broken COVID response and pass the American Rescue Plan.",JoeBiden,en,,1561,2291,13255,176,uncertain,0.55
+2022-06-29 22:34:00+00:00,1542275218407936006,"COVID-19 vaccinations are available for children under five years of age. More and more locations are ramping up appointments, and more vaccines are being delivered to providers in your areas every day. 
+
+This is a monumental step forward.",JoeBiden,en,,2589,1224,8332,211,positive,0.7375
+2022-06-23 19:00:19+00:00,1540047115002564608,"With vaccines, treatments, and other tools widely available, more than 220 million Americans are vaccinated, more than 100 million Americans have their booster shot, and daily deaths due to COVID-19 are down 90%.
+
+We've come a long way in our fight against COVID-19.",JoeBiden,en,,1420,883,6410,113,positive,0.5590277777777778
+2022-06-22 23:52:00+00:00,1539758130313056257,"Since I took office, we've been committed to making sure every parent has the opportunity to protect their children from COVID-19. 
+
+Starting this week, you can go to https://t.co/EwdQ2dXioe and find information and appointments near you. https://t.co/RRO6auk1j7",JoeBiden,en,,1959,802,5032,207,positive,0.6
+2022-06-22 16:08:03+00:00,1539641375414751232,"The United States is now the first country in the world to offer safe and effective COVID-19 vaccines for children as young as six months old.
+
+For the first time in our fight against this pandemic, nearly every American can now have access to life-saving vaccines.",JoeBiden,en,,2199,1590,10825,251,positive,0.61875

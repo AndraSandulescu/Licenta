@@ -71,12 +71,6 @@ namespace LicentaBun.Controllers
                     TopSubjects = topSubjects.Select(kv => kv.Key).ToList()
                 };
 
-
-
-
-
-
-
                 return Ok(response); // Returnează rezultatul ca răspuns HTTP 200
             }
             catch (Exception ex)

@@ -80,12 +80,11 @@ namespace LicentaBun.Controllers
             SearchFile searchFile = new SearchFile
             {
                 Filename = output,
-                UserID = userID, // Înlocuiți "NumeUtilizator" cu utilizatorul care a făcut căutarea
+                UserID = userID,
                 SearchInput = search
             };
 
             searchFileDictionary.Add(searchFileIndex, searchFile);
-
 
 
 
@@ -253,7 +252,5 @@ namespace LicentaBun.Controllers
                 return NotFound();
             }
         }
-
     }
-
 }

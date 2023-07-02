@@ -96,7 +96,7 @@ if __name__ == "__main__":
     usernames = ["AOC","BillClinton","BarackObama","SenSchumer", "CoryBooker", "ewarren", "HillaryClinton",  "IlhanMN", "JoeBiden", "KamalaHarris", 
                  "LindseyGrahamSC", "marcorubio",  "MichelleObama", "LeaderMcConnell", "SpeakerPelosi", "RandPaul", "tedcruz"]  # Lista statică de utilizatori
     until = datetime.datetime.now().strftime('%Y-%m-%d')  # Data până la care să se facă căutarea (astăzi)
-    since = (datetime.datetime.now() - datetime.timedelta(hours=72)).strftime(
+    since = (datetime.datetime.now() - datetime.timedelta(hours=24)).strftime(
         '%Y-%m-%d')  # Data de la care să se facă căutarea (ultimele 24 de ore)
     retweet = "y"  # Include retweet-uri (da)
     replies = "y"  # Include răspunsuri (da)

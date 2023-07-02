@@ -92,10 +92,24 @@ namespace LicentaBun.Controllers
 
         private List<SentimentCSV> SearchEntriesInCsv(string csvFilePath, string since, string until, string text)
         {
+            // Tratează momentele când since și until sunt nule sau goale
+            if (string.IsNullOrEmpty(until))
+            {
+                until = DateTime.Now.ToString("yyyy-MM-dd");
+            }
 
-            //trateaza momentele cand since si until sunt egale cu null
+            if (string.IsNullOrEmpty(since))
+            {
+                DateTime untilDate = DateTime.Parse(until);
+                DateTime sinceDate = untilDate.AddDays(-7);
+                since = sinceDate.ToString("yyyy-MM-dd");
+            }
 
-            //trateaza moemnt cand text e null
+            // Tratează momentul când textul este nul sau gol
+            if (string.IsNullOrEmpty(text))
+            {
+                text = string.Empty; // Setează textul gol pentru a nu afecta condiția de verificare a cuvintelor
+            }
 
             List<SentimentCSV> matchingEntries = new List<SentimentCSV>();
 
@@ -105,16 +119,24 @@ namespace LicentaBun.Controllers
                 matchingEntries = csv.GetRecords<SentimentCSV>()
                     .Where(entry =>
                     {
-                        DateTime entryDate = DateTime.Parse(entry.searchCsv.DateTime);
+                        DateTime entryDate = DateTime.Parse(entry.searchCsv.DateTime); // Data la care a fost postat tweet-ul
                         DateTime sinceDate = DateTime.Parse(since);
                         DateTime untilDate = DateTime.Parse(until);
-                        return entryDate >= sinceDate && entryDate <= untilDate && entry.searchCsv.Text.Contains(text);
+                        string[] words = text.Split(' ');
+                        //return entryDate >= sinceDate && entryDate <= untilDate &&
+                        //       words.All(word => entry.searchCsv.Text.Split(' ').Contains(word));
+
+                        return entryDate >= sinceDate && entryDate <= untilDate &&
+                            words.All(word => entry.searchCsv.Text.Split(' ').Any(entryWord =>
+                            string.Equals(word, entryWord, StringComparison.OrdinalIgnoreCase)));
+
                     })
                     .ToList();
             }
 
             return matchingEntries;
         }
+
 
         private ModelResponse CreateModelResponse(List<SentimentCSV> results, int searchIndex)
         {
